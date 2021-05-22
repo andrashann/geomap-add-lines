@@ -15,7 +15,7 @@ This is exactly what this bookmarklet does: it connects the points of a multi-ca
 
 ## Usage
 
-1. Drag the following link to your bookmarks bar: <a href="javascript:(function (){document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/andrashann/geomap-add-lines@main/bookmarklet.min.js';}());">GeoMap Lines</a>
+1. Save the following address to your bookmarks bar: `javascript:(function (){document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/andrashann/geomap-add-lines@main/bookmarklet.min.js';}());`
 1. Go to [GeoMap](https://geocaching.hu/geomap/), wait for everything to load, then click the bookmarklet.
 1. The connecting lines should appear.
 
@@ -33,6 +33,6 @@ Pontosan ezt teszi lehetővé ez a bookmarklet: a honlapon megadott sorrendben �
 
 ## Használat
 
-1. Húzd a következő linket a könyvjelzők közé: <a href="javascript:(function (){document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/andrashann/geomap-add-lines@main/bookmarklet.min.js';}());">GeoMap vonalak</a>
+1. Mentsd el az alábbi hivatkozást a könyvjelzőid közé: `javascript:(function (){document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/andrashann/geomap-add-lines@main/bookmarklet.min.js';}());`
 1. Menj a [GeoMapre](https://geocaching.hu/geomap/) és bökj az új könyvjelzőre (bookmarkletre)!
 1. Megjelennek az összekötő vonalak.

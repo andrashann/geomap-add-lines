@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>geomap-add-lines</title>
+</head>
+<body>
+  <div class="container" style="max-width:800px;">
+
+<h1 id="geomap-add-lines">🇺🇸 geomap-add-lines</h1>
+<h2 id="intro">Intro</h2>
+<p><a href="https://geocaching.hu">geocaching.hu</a> is the Hungarian geocaching website with a different (albeit overlapping) set of geocaches than <a href="https://geocaching.com">geocaching.com</a>.</p>
+<p>Their <a href="https://geocaching.hu/geomap/">GeoMap interface</a> is a handy tool to get a quick map-based overview of geocaches hosted on the website. Some geocaches have multiple points that the player has to visit; these are called multi-caches. It would be handy to see which points belong to one multi-cache, but this functionality is not available on GeoMap.</p>
+<p>This is exactly what this bookmarklet does: it connects the points of a multi-cache with a line in the order they are listed on the website.</p>
+<div class="figure">
+<img src="geolines.jpg" alt="geocaches with multiple points connected to each other" />
+<p class="caption">geocaches with multiple points connected to each other</p>
+</div>
+<p><em>Result of using the bookmarklet: blue lines connect the points of multi-caches</em></p>
+<h2 id="usage">Usage</h2>
+<ol style="list-style-type: decimal">
+<li>Drag the following link to your bookmarks bar: <a href="javascript:(function (){document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/andrashann/geomap-add-lines@main/bookmarklet.min.js';}());">GeoMap Lines</a></li>
+<li>Go to <a href="https://geocaching.hu/geomap/">GeoMap</a>, wait for everything to load, then click the bookmarklet.</li>
+<li>The connecting lines should appear.</li>
+</ol>
+<p>Check out <a href="https://github.com/andrashann/geomap-add-lines">the code on GitHub</a>.</p>
+<h1 id="geomap-add-lines-1">🇭🇺 geomap-add-lines</h1>
+<h2 id="bevezető">Bevezető</h2>
+<p>A <a href="https://geocaching.hu/geomap/">GeoMap</a> a <a href="https://geocaching.hu">geocaching.hu</a> térképes felülete. Egyes geoládák több felkeresendő pontból állnak, ezeket multiládának hívják. Praktikus lenne a térképről látni, hogy mely pontok tartoznak egy multiládához, de ez a funkció hiányzik a GeoMapről.</p>
+<p>Pontosan ezt teszi lehetővé ez a bookmarklet: a honlapon megadott sorrendben összköti a multiládák pontjait.</p>
+<div class="figure">
+<img src="geolines.jpg" alt="többpontos láda pontjai összekötve" />
+<p class="caption">többpontos láda pontjai összekötve</p>
+</div>
+<p><em>A bookmarklet használatának eredménye: kék vonal köti össze az egy multiládához tartozó pontokat.</em></p>
+<h2 id="használat">Használat</h2>
+<ol style="list-style-type: decimal">
+<li>Húzd a következő linket a könyvjelzők közé: <a href="javascript:(function (){document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/andrashann/geomap-add-lines@main/bookmarklet.min.js';}());">GeoMap vonalak</a></li>
+<li>Menj a <a href="https://geocaching.hu/geomap/">GeoMapre</a> és bökj az új könyvjelzőre (bookmarkletre)!</li>
+<li>Megjelennek az összekötő vonalak.</li>
+</ol>
+<p>Nézd meg <a href="https://github.com/andrashann/geomap-add-lines">a kódot GitHubon</a>.</p>
+</div>
+</body>
+</html>
