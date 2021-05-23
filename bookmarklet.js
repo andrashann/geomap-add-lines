@@ -5,17 +5,18 @@ one element looks like this:
 "N", "M", "MK"]
 [0] and [1] are ids of the cache. [2] and [3] are coordinates. [4] is the
 type of the cache. [5] is the status (can be found?). [6] is the point id. 
-[7] is the name. [8] is find status (N = not found) [9] is the point type
-(M = multipoint, T = further point of a multicache), [10] is a one-field
-summary of [8] and [9].
+[7] is the name of the cache. [8] is find status (N = not yet found by the
+logged in user; everything is N if not logged in). [9] is the point type
+(M = starting point of a multi-cache, T = additional point of a multi-cache),
+[10] is a one-field summary of [8] and [9].
 */
 
 var newData = data.filter(point => (
   // we only care if the logged-in user has not found the cache yet to
   // save resources.
   point[8] == "N"
-  // and the point should be the starting or subsequent point of 
-  // a multi - cache
+  // and the point should be the starting or additional point of 
+  // a multi-cache
   && (point[9] == "M" || point[9] == "T")
 ))
 var sortedData = newData.sort(
@@ -32,13 +33,14 @@ var sortedData = newData.sort(
 
 // initialize an empty list for all the GeoJSON LineStrings we will create
 var myLines = [];
-// the coordinates that go in the "current" LineString
+// the coordinates that go in the "current" LineString as we iterate through
+// the points
 var currentCoordinates = [];
 for (let i = 0; i < sortedData.length - 1; i++) {
   // add the current point to the list
   currentCoordinates.push([
     // coordinates are switched because GeoJSON uses x, y coordinates,
-    // which is longitude and longitude in a geographical coordinate
+    // which is longitude and latitude in a geographical coordinate
     // system, while geographical coordinates are normally referred to
     // as lat-lon pairs (and this is the order in the data as well).
     sortedData[i][3], sortedData[i][2] 
@@ -61,6 +63,7 @@ for (let i = 0; i < sortedData.length - 1; i++) {
     currentCoordinates = []
   }
 }
+
 // the main page has Leaflet loaded and an object called "map" that
 // holds the map. let's add our data as a layer to it.
 var linesLayer = L.geoJSON().addTo(map);
