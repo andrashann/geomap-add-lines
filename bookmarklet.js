@@ -15,6 +15,8 @@ var newData = data.filter(point => (
   // we only care if the logged-in user has not found the cache yet to
   // save resources.
   point[8] == "N"
+  // the cache should not be archived
+  && point[5] != "C"
   // and the point should be the starting or additional point of 
   // a multi-cache
   && (point[9] == "M" || point[9] == "T")
